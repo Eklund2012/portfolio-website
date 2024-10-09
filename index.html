@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <style>
-        .github-link img {
-            width: 24px; /* Size of the GitHub icon */
-            height: 24px;
-            vertical-align: middle; /* Align icon with text */
-            margin-left: 10px; /* Space between title and icon */
-        }
+
     </style>
 </head>
+
 <body>
     <header>
         <h1>David Eklund</h1>
@@ -24,11 +21,18 @@
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div class="switch">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
     </header>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I'm David, a 22-year-old computer science student currently in my third and final year of university.</p>
+        <p>Hello! I'm David, a 22-year-old computer science student currently in my third and final year at Karlstad
+            University.</p>
     </section>
 
     <section id="projects">
@@ -37,11 +41,12 @@
             <div class="project">
                 <img src="img/weight-tracker.png" alt="Weight Tracker" class="project-image">
                 <h3>Weight Tracker
-                    <a href="https://github.com/your-repo-link" class="github-link" target="_blank">
+                    <a href="https://github.com/Eklund2012/weight-tracker" class="github-link" target="_blank">
                         <img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub">
                     </a>
                 </h3>
-                <p>A web app designed to track your weight and display your daily recommended intake of carbs, fat, and protein.</p>
+                <p>A web app designed to track your weight and display your daily recommended intake of carbs, fat, and
+                    protein.</p>
             </div>
             <div class="project">
                 <img src="img/weight-tracker.png" alt="Project 2" class="project-image">
@@ -53,8 +58,8 @@
                 <p>A short description of another project. Highlight key features and technologies used.</p>
             </div>
             <div class="project">
-                <img src="img/weight-tracker.png" alt="Project 3" class="project-image">
-                <h3>Project 3
+                <img src="img/weight-tracker.png" alt="Project 2" class="project-image">
+                <h3>Project 2
                     <a href="https://github.com/your-repo-link" class="github-link" target="_blank">
                         <img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub">
                     </a>
@@ -65,28 +70,26 @@
     </section>
 
     <section id="contact">
-      <h2>Contact Me</h2>
-      <p>If you'd like to get in touch, feel free to send me an email at <a href="mailto:david.eklund9@gmail.com">david.eklund9@gmail.com</a>.</p>
-  
-      <div class="social-links">
-          <a href="https://github.com/your-github-username" target="_blank">
-              <img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub" class="social-icon">
-          </a>
-          <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank">
-              <img src="https://img.icons8.com/material-outlined/24/000000/linkedin.png" alt="LinkedIn" class="social-icon">
-          </a>
-          <a href="mailto:david.eklund9@gmail.com">
-              <img src="https://img.icons8.com/material-outlined/24/000000/mail.png" alt="Email" class="social-icon">
-          </a>
-          <a href="https://gitlab.com/your-gitlab-username" target="_blank">
-            <img src="https://img.icons8.com/material-outlined/24/000000/gitlab.png" alt="GitLab" class="social-icon">
-        </a>
-      </div>
-  </section>
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to send me an email at <a
+                href="mailto:david.eklund9@gmail.com">david.eklund9@gmail.com</a>.</p>
 
-  <footer>
-    <p>Thank you for visiting my portfolio!</p>
-</footer>
+        <div class="social-links">
+            <a href="https://github.com/Eklund2012" target="_blank">
+                <img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub"
+                    class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/david-eklund02" target="_blank">
+                <img src="https://img.icons8.com/material-outlined/24/000000/linkedin.png" alt="LinkedIn"
+                    class="social-icon">
+            </a>
+            <a href="mailto:david.eklund9@gmail.com">
+                <img src="https://img.icons8.com/material-outlined/24/000000/mail.png" alt="Email" class="social-icon">
+            </a>
+        </div>
+    </section>
 
+    <script src="scripts/app.js"></script>
 </body>
+
 </html>

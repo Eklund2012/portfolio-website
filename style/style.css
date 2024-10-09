@@ -1,3 +1,84 @@
+:root {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --header-background: #1B262C;
+    --section-background: #1e1e1e;
+    --link-color: #00B7C2;
+    --hover-color: #80deea;
+    --project-background: #242424;
+    --project-hover-background: #333333;
+    --project-p-color: #bbb
+}
+
+/* Light theme styles */
+body.light {
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --header-background: #4b768d;
+    --section-background: #ffffff;
+    --link-color: #00B7C2;
+    --hover-color: #007B8D;
+    --project-background: #fff;
+    --project-hover-background: #f0f0f0;
+    --project-p-color: #121212;
+}
+
+.switch {
+    height: 100px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+    
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #2b2b2b;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +87,16 @@
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 header {
-    background-color: #1B262C;
+    background-color: var(--header-background);
     color: #fff;
     padding: 20px;
     text-align: center;
+    margin-bottom: 5px;
 }
 
 header h1 {
@@ -22,14 +104,14 @@ header h1 {
 }
 
 header nav a {
-    color: #fff;
+    color: #00B7C2; /* Bright accent color for links */
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
 }
 
 header nav a:hover {
-    color: #f4f4f4;
+    color: #80deea; /* Lighter shade on hover */
     text-decoration: underline;
 }
 
@@ -37,12 +119,16 @@ section {
     padding: 30px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 5px;
+    background-color: var(--section-background);
+    border-radius: 10px; /* Soft corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }
 
 section h2 {
     text-align: center;
     margin-bottom: 40px;
-    color: #333;
+    color: #00b7c2; /* Accent color for headings */
     font-weight: 600;
 }
 
@@ -60,32 +146,50 @@ section h2 {
 }
 
 .project {
-    background-color: #fff;
+    background-color: var(--project-background);
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.project:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+    background-color: var(--project-hover-background);
 }
 
 .project-image {
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain the aspect ratio */
-    border-radius: 8px; /* Rounded corners */
-    margin-bottom: 10px; /* Space below the image */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease-in-out;
 }
 
-#projects .project:hover {
-    box-shadow: 0 40px 42px rgba(0, 0, 0, 0.1);
+.project:hover .project-image {
+    opacity: 0.9;
 }
 
 .project h3 {
     margin-bottom: 10px;
     font-size: 24px;
+    color: #80deea; /* Lighter color for project titles */
 }
 
 .project p {
     font-size: 16px;
-    color: #555;
+    color: var(--project-p-color); /* Softer text color */
+}
+
+.github-link img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
 #contact p {
@@ -94,32 +198,31 @@ section h2 {
 }
 
 #contact a {
-    color: #333;
+    color: var(--link-color);
     text-decoration: none;
     font-weight: bold;
 }
 
 #contact a:hover {
-    color: #555;
+    color: var(--hover-color);
 }
 
 .social-links {
-    text-align: center; /* Center the links */
-    margin-top: 20px; /* Space above the icons */
+    text-align: center;
+    margin-top: 20px;
 }
 
 .social-icon {
-    width: 36px; /* Size of the icons */
-    height: 36px; /* Size of the icons */
-    margin: 0 10px; /* Space between icons */
-    vertical-align: middle; /* Align with text if needed */
-    transition: transform 0.2s; /* Smooth hover effect */
+    width: 36px;
+    height: 36px;
+    margin: 0 10px;
+    vertical-align: middle;
+    transition: transform 0.2s;
 }
 
 .social-icon:hover {
-    transform: scale(1.1); /* Scale up on hover */
+    transform: scale(1.1);
 }
-
 
 footer {
     background-color: #0F4C75;
