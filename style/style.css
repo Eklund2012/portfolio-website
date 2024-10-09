@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #1B262C;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #f4f4f4;
+    text-decoration: underline;
+}
+
+section {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 600;
+}
+
+#about p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.project-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+#projects .project:hover {
+    box-shadow: 0 40px 42px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.project p {
+    font-size: 16px;
+    color: #555;
+}
+
+#contact p {
+    text-align: center;
+    font-size: 18px;
+}
+
+#contact a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #555;
+}
+
+.social-links {
+    text-align: center; /* Center the links */
+    margin-top: 20px; /* Space above the icons */
+}
+
+.social-icon {
+    width: 36px; /* Size of the icons */
+    height: 36px; /* Size of the icons */
+    margin: 0 10px; /* Space between icons */
+    vertical-align: middle; /* Align with text if needed */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+
+footer {
+    background-color: #0F4C75;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
