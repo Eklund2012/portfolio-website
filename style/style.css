@@ -5,78 +5,78 @@
     --section-background: #1e1e1e;
     --link-color: #00B7C2;
     --hover-color: #80deea;
-    --project-background: #242424;
+    --project-background: #1B262C;
     --project-hover-background: #333333;
-    --project-p-color: #bbb
+    --project-p-color: #e0e0e0;
 }
 
 /* Light theme styles */
 body.light {
-    --background-color: #f4f4f4;
+    --background-color: #aaaaaa;
     --text-color: #333;
     --header-background: #4b768d;
     --section-background: #ffffff;
     --link-color: #00B7C2;
     --hover-color: #007B8D;
-    --project-background: #fff;
+    --project-background: #aaaaaa;
     --project-hover-background: #f0f0f0;
     --project-p-color: #121212;
 }
 
-.switch {
-    height: 100px;
-    position: absolute;
-    right: 50px;
-    top: 50px;
-}
-    
-.theme-switch {
-  display: inline-block;
-  height: 34px;
-  position: relative;
-  width: 60px;
+/* Collapsible section styling for mobile only */
+@media (max-width: 768px) {
+    .switch {
+        display: none; /* Hide on mobile */
+    }
 }
 
-.theme-switch input {
-  display:none;
+/* Collapsible section styling for mobile only */
+@media (max-width: 768px) {
+    /* Hide content by default on mobile */
+    .collapsible-content {
+        display: none; /* Hide sections by default on mobile */
+        padding: 10px;
+        transition: max-height 0.3s ease-out;
+    }
+
+    /* Make headers look clickable */
+    .collapsible-section h2 {
+        cursor: pointer;
+        background-color: var(--header-background);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    /* Open class to show content */
+    .collapsible-content.open {
+        display: block; /* Show content when open */
+    }
 }
 
-.slider {
-  background-color: #ccc;
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: .4s;
+/* For larger screens, keep content visible */
+@media (min-width: 769px) {
+    .collapsible-content {
+        display: block; /* Ensure content is always visible on larger screens */
+    }
 }
 
-.slider:before {
-  background-color: #fff;
-  bottom: 4px;
-  content: "";
-  height: 26px;
-  left: 4px;
-  position: absolute;
-  transition: .4s;
-  width: 26px;
+html {
+    scroll-behavior: smooth;
 }
 
-input:checked + .slider {
-  background-color: #2b2b2b;
+header {
+    animation: fadeInDown 0.8s ease-in-out;
 }
 
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 * {
@@ -91,30 +91,6 @@ body {
     color: var(--text-color);
 }
 
-header {
-    background-color: var(--header-background);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-header h1 {
-    margin-bottom: 5px;
-}
-
-header nav a {
-    color: #00B7C2; /* Bright accent color for links */
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav a:hover {
-    color: #80deea; /* Lighter shade on hover */
-    text-decoration: underline;
-}
-
 section {
     padding: 30px 20px;
     max-width: 1200px;
@@ -127,107 +103,7 @@ section {
 
 section h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #00b7c2; /* Accent color for headings */
     font-weight: 600;
-}
-
-#about p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 18px;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.project {
-    background-color: var(--project-background);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    position: relative;
-    overflow: hidden;
-}
-
-.project:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
-    background-color: var(--project-hover-background);
-}
-
-.project-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.project:hover .project-image {
-    opacity: 0.9;
-}
-
-.project h3 {
-    margin-bottom: 10px;
-    font-size: 24px;
-    color: #80deea; /* Lighter color for project titles */
-}
-
-.project p {
-    font-size: 16px;
-    color: var(--project-p-color); /* Softer text color */
-}
-
-.github-link img {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin-left: 10px;
-}
-
-#contact p {
-    text-align: center;
-    font-size: 18px;
-}
-
-#contact a {
-    color: var(--link-color);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#contact a:hover {
-    color: var(--hover-color);
-}
-
-.social-links {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.social-icon {
-    width: 36px;
-    height: 36px;
-    margin: 0 10px;
-    vertical-align: middle;
-    transition: transform 0.2s;
-}
-
-.social-icon:hover {
-    transform: scale(1.1);
-}
-
-footer {
-    background-color: #0F4C75;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
 }

@@ -5,9 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Your Name - Portfolio">
+    <meta property="og:title" content="David Eklund's Portfolio">
+    <meta property="og:description" content="Portfolio of David Eklund, showcasing projects and skills.">
+    <meta property="og:image" content="link_to_your_logo_or_image.jpg">
     <title>David Eklund | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/contact.css">
+    <link rel="stylesheet" href="style/projects.css">
+    <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/footer.css">
+
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/favicon.ico">
     <style>
 
     </style>
@@ -20,76 +32,116 @@
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
+            <a href="docs/David_Eklund_CV.pdf" target="_blank">Resume</a>
         </nav>
-        <div class="switch">
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round"></div>
-            </label>
-        </div>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm David, a 22-year-old computer science student currently in my third and final year at Karlstad
-            University.</p>
+    <section id="about" class="collapsible-section">
+        <h2 onclick="toggleSection('about-content')">About Me</h2>
+        <div id="about-content" class="collapsible-content">
+            <p>Hello! I'm David, a 22-year-old computer science student currently in my third and final year at Karlstad
+                University. My passion for technology started at a young age, and it has only grown as I delved deeper
+                into the field.</p>
+            <br>
+            <p>I am particularly passionate about software development and artificial intelligence. Throughout my
+                studies, I have completed coursework in several key areas, including algorithms, operating systems,
+                databases, web development and more.</p>
+            <br>
+            <p>Looking ahead, I aspire to work as a software engineer in the tech industry, focusing on innovative
+                solutions that make a difference in people's lives. I'm constantly seeking to enhance my skills and
+                learn new technologies.</p>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project">
-                <img src="img/weight-tracker.png" alt="Weight Tracker" class="project-image">
-                <h3>Weight Tracker
-                    <a href="https://github.com/Eklund2012/weight-tracker" class="github-link" target="_blank">
-                        <img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub">
+    <section id="projects" class="collapsible-section">
+        <h2 onclick="toggleSection('projects-content')">Projects</h2>
+        <div id="projects-content" class="collapsible-content">
+            <div class="project-grid">
+                <div class="project">
+                    <img src="img/weight-tracker.png" alt="Weight Tracker" class="project-image">
+                    <h3><a href="https://github.com/Eklund2012/weight-tracker" class="github-link" target="_blank">
+                        Weight Tracker
                     </a>
-                </h3>
-                <p>A web app designed to track your weight and display your daily recommended intake of carbs, fat, and
-                    protein.</p>
-            </div>
-            <div class="project">
-                <img src="img/weight-tracker.png" alt="Project 2" class="project-image">
-                <h3>Project 2
-                    <a href="https://github.com/your-repo-link" class="github-link" target="_blank">
-                        <img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub">
+
+                        <a href="https://github.com/Eklund2012/weight-tracker" class="github-link" target="_blank">
+                            <img src="https://img.icons8.com/material-outlined/24/FFFFFF/github.png"
+                                data-dark-src="https://img.icons8.com/material-outlined/24/FFFFFF/github.png"
+                                data-light-src="https://img.icons8.com/material-outlined/24/000000/github.png"
+                                alt="GitHub"> </a>
+                    </h3>
+                    <p>A web app designed to track your weight and display your daily recommended intake of carbs, fat,
+                        and
+                        protein.</p>
+                    <div class="tech-icons">
+                        <i class="fab fa-html5 tech-icon" title="HTML5"></i>
+                        <i class="fab fa-css3-alt tech-icon" title="CSS3"></i>
+                        <i class="fab fa-js tech-icon" title="JavaScript"></i>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="img/portfolio.png" alt="Weight Tracker" class="project-image">
+                    <h3><a href="https://github.com/Eklund2012/portfolio-website" class="github-link" target="_blank">
+                        Portfolio Website
                     </a>
-                </h3>
-                <p>A short description of another project. Highlight key features and technologies used.</p>
-            </div>
-            <div class="project">
-                <img src="img/weight-tracker.png" alt="Project 2" class="project-image">
-                <h3>Project 2
-                    <a href="https://github.com/your-repo-link" class="github-link" target="_blank">
-                        <img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub">
-                    </a>
-                </h3>
-                <p>A short description of another project. Highlight key features and technologies used.</p>
+                        <a href="https://github.com/Eklund2012/portfolio-website" class="github-link" target="_blank">
+                            <img src="https://img.icons8.com/material-outlined/24/FFFFFF/github.png"
+                                data-dark-src="https://img.icons8.com/material-outlined/24/FFFFFF/github.png"
+                                data-light-src="https://img.icons8.com/material-outlined/24/000000/github.png"
+                                alt="GitHub"> </a>
+                    </h3>
+                    <p>My personal portfolio website, containing information about me and my coding projects. Made with
+                        JavaScript, HTML, CSS.</p>
+                    <div class="tech-icons">
+                        <i class="fab fa-html5 tech-icon" title="HTML5"></i>
+                        <i class="fab fa-css3-alt tech-icon" title="CSS3"></i>
+                        <i class="fab fa-js tech-icon" title="JavaScript"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to send me an email at <a
-                href="mailto:david.eklund9@gmail.com">david.eklund9@gmail.com</a>.</p>
+    <section id="contact" class="collapsible-section">
+        <h2 onclick="toggleSection('contact-content')">Contact Me</h2>
+        <div id="contact-content" class="collapsible-content">
+            <p>If you'd like to get in touch, feel free to send me an email at <a
+                    href="mailto:david.eklund9@gmail.com">david.eklund9@gmail.com</a></p>
 
-        <div class="social-links">
-            <a href="https://github.com/Eklund2012" target="_blank">
-                <img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub"
-                    class="social-icon">
-            </a>
-            <a href="https://www.linkedin.com/in/david-eklund02" target="_blank">
-                <img src="https://img.icons8.com/material-outlined/24/000000/linkedin.png" alt="LinkedIn"
-                    class="social-icon">
-            </a>
-            <a href="mailto:david.eklund9@gmail.com">
-                <img src="https://img.icons8.com/material-outlined/24/000000/mail.png" alt="Email" class="social-icon">
-            </a>
+            <div class="social-links">
+                <a href="https://github.com/Eklund2012" target="_blank">
+                    <img src="https://img.icons8.com/material-outlined/24/FFFFFF/github.png"
+                        data-dark-src="https://img.icons8.com/material-outlined/24/FFFFFF/github.png"
+                        data-light-src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub"
+                        class="social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/david-eklund02" target="_blank">
+                    <img src="https://img.icons8.com/material-outlined/24/FFFFFF/linkedin.png"
+                        data-dark-src="https://img.icons8.com/material-outlined/24/FFFFFF/linkedin.png"
+                        data-light-src="https://img.icons8.com/material-outlined/24/000000/linkedin.png" alt="LinkedIn"
+                        class="social-icon">
+                </a>
+                <a href="mailto:david.eklund9@gmail.com">
+                    <img src="https://img.icons8.com/material-outlined/24/FFFFFF/mail.png"
+                        data-dark-src="https://img.icons8.com/material-outlined/24/FFFFFF/mail.png"
+                        data-light-src="https://img.icons8.com/material-outlined/24/000000/mail.png" alt="Email"
+                        class="social-icon">
+                </a>
+            </div>
+            <a href="docs/David_Eklund_CV.pdf" download class="download-resume-button">Download Resume</a>
         </div>
     </section>
+
+    <footer>
+        <p>2024 David Eklund</p>
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </footer>
 
     <script src="scripts/app.js"></script>
+    <script src="https://kit.fontawesome.com/6aefbfaa44.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

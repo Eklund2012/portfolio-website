@@ -1,0 +1,31 @@
+#contact p {
+    text-align: center;
+    font-size: 18px;
+}
+
+#contact a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: var(--hover-color);
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    margin: 0 10px;
+    vertical-align: middle;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
